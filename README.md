@@ -1,7 +1,7 @@
 JTScrollViewController
 ======================
 
-JTScrollViewController help you to create pragmatically a UIViewController with a UIScrollView which take all the space available using Auto Layout without using nib file.
+JTScrollViewController help you to create pragmatically a UIViewController with a UIScrollView which take all the space available using Auto Layout without using a nib file.
 
 Installation
 ============
@@ -24,7 +24,7 @@ Create a controller which inherit from JTScrollViewController.
 @end
 ```
 
-Create your views in the viewDidLoad and call configureConstraintsForSubviews for create all constraints.
+Create your views in the `viewDidLoad` and call `configureConstraintsForSubviews` for create all constraints.
 ```objective-c
 #import "MyViewController.h"
 
@@ -34,20 +34,20 @@ Create your views in the viewDidLoad and call configureConstraintsForSubviews fo
 {
     [super viewDidLoad];
     
-    // Add all your views to self.contentView, never self.scrollView
+    // Add all your views to self.contentView
     // Do your stuff...
     {
-        UITextField *textField = [UITextField new];
+        UITextField *textField = [UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 45)];
         [self.contentView addSubview:textField];
     }
     
     {
-    	UITextField *textField = [UITextField new];
+        UITextField *textField = [UITextField alloc] initWithFrame:CGRectMake(0, 0, 0, 45)];
         [self.contentView addSubview:textField];
     }
 
     {
-    	UIButton *button = [UIButton new];
+    	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
         [self.contentView addSubview:button];
     }
 
