@@ -1,3 +1,10 @@
+//
+//  JTScrollViewController.m
+//  JTScrollViewController
+//
+//  Created by Jonathan Tribouharet
+//
+
 #import "JTScrollViewController.h"
 
 #import <Masonry.h>
@@ -28,6 +35,20 @@
     self.view = view;
 }
 
+- (void)addVerticalSpacingForStatusBar:(BOOL)haveSpace
+{
+    if(haveSpace){
+        [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@22);
+        }];
+    }
+    else{
+        [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@0);
+        }];
+    }
+}
+
 - (void)configureConstraintsForSubviews
 {
     if(self.contentView.subviews.count == 0){
@@ -35,7 +56,7 @@
     }
     
     for(UIView *view in self.contentView.subviews){
-        [view mas_updateConstraints:^(MASConstraintMaker *make) {
+        [view mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(view.superview.mas_left);
             make.right.equalTo(view.superview.mas_right);
             make.height.equalTo([NSNumber numberWithFloat:CGRectGetHeight(view.frame)]);
@@ -46,7 +67,7 @@
         UIView *view = self.contentView.subviews.firstObject;
         
         [view mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(view.superview.mas_top);
+            make.top.equalTo(view.superview.mas_top).with.offset(view.frame.origin.y);
         }];
     }
     
@@ -63,7 +84,7 @@
         UIView *viewNext = self.contentView.subviews[i + 1];
         
         [viewNext mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(view.mas_bottom);
+            make.top.equalTo(view.mas_bottom).with.offset(viewNext.frame.origin.y);
         }];
     }
 }
