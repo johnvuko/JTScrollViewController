@@ -13,6 +13,5 @@
 @property (nonatomic, strong, readonly) UIView *contentView;
 
 - (void)configureConstraintsForSubviews;
-- (void)addVerticalSpacingForStatusBar:(BOOL)haveSpace;
 
 @end

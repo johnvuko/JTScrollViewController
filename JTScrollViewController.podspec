@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JTScrollViewController"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Create ScrollViewController pragmatically using Auto Layout."
   s.homepage     = "https://github.com/jonathantribouharet/JTScrollViewController"
   s.license      = { :type => 'MIT' }

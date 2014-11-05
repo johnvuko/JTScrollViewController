@@ -51,9 +51,6 @@ Create your views in the `viewDidLoad` and call `configureConstraintsForSubviews
         [self.contentView addSubview:button];
     }
 
-    // Add vertical space (22px) for the status bar
-    [self addVerticalSpacingForStatusBar:YES];
-
     // Call configureConstraintsForSubviews for create all constraints
     [self configureConstraintsForSubviews];
 }

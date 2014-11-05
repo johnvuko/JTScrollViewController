@@ -23,10 +23,6 @@
     _contentView = [UIView new];
     [_scrollView addSubview:_contentView];
     
-    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.edges.equalTo(view);
-    }];
-    
     [_contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_scrollView);
         make.width.equalTo(view.mas_width);
@@ -35,18 +31,20 @@
     self.view = view;
 }
 
-- (void)addVerticalSpacingForStatusBar:(BOOL)haveSpace
+- (void)viewDidLoad
 {
-    if(haveSpace){
-        [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(@22);
-        }];
-    }
-    else{
-        [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(@0);
-        }];
-    }
+    [super viewDidLoad];
+    
+    UIView *topLayoutView = (UIView *)self.topLayoutGuide;
+    UIView *bottomLayoutView = (UIView *)self.bottomLayoutGuide;
+    
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(topLayoutView.mas_bottom);
+        make.bottom.equalTo(bottomLayoutView.mas_top);
+        
+        make.left.equalTo(_scrollView.superview.mas_left);
+        make.right.equalTo(_scrollView.superview.mas_right);
+    }];
 }
 
 - (void)configureConstraintsForSubviews
