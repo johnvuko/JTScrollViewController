@@ -31,7 +31,9 @@
         
         [self.contentView addSubview:separator];
     }
-        
+
+    [self addVerticalSpacingForStatusBar:YES];
+    
     [self configureConstraintsForSubviews];
 }
 

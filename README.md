@@ -24,6 +24,7 @@ Create a controller which inherit from JTScrollViewController.
 ```
 
 Create your views in the `viewDidLoad` and call `configureConstraintsForSubviews` for create all constraints.
+You can call `addVerticalSpacingForStatusBar` when you don't want the scrollView go under the status bar.
 ```objective-c
 #import "MyViewController.h"
 
@@ -50,6 +51,10 @@ Create your views in the `viewDidLoad` and call `configureConstraintsForSubviews
     	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 0, 50)];
         [self.contentView addSubview:button];
     }
+
+    // Add vertical space (22px) for the status bar
+    // Use this when you don't have a navigation bar and you don't want the scroll go under the status bar
+    [self addVerticalSpacingForStatusBar:YES];
 
     // Call configureConstraintsForSubviews for create all constraints
     [self configureConstraintsForSubviews];
