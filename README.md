@@ -1,6 +1,10 @@
 JTScrollViewController
 ======================
 
+![Version](https://img.shields.io/cocoapods/v/JTScrollViewController.svg)
+![License](https://img.shields.io/cocoapods/l/JTScrollViewController.svg)
+![Platform](https://img.shields.io/cocoapods/p/JTScrollViewController.svg)
+
 JTScrollViewController help you to create pragmatically a UIViewController with a UIScrollView which take all the space available using Auto Layout without using a nib file.
 It creates all constraints required for your views.
 
