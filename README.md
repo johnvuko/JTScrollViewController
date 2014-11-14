@@ -12,7 +12,7 @@ It creates all constraints required for your views.
 
 With [CocoaPods](http://cocoapods.org/), add this line to your Podfile.
 
-	pod 'JTScrollViewController', '~> 1.0.0'
+	pod 'JTScrollViewController', '~> 1.0'
 
 
 ## Usage
