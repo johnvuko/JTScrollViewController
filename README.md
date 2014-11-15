@@ -70,6 +70,10 @@ You can call `addVerticalSpacingForStatusBar` when you don't want the scrollView
 - iOS 7 or higher
 - Automatic Reference Counting (ARC)
 
+## Author
+
+- [Jonathan Tribouharet](https://github.com/jonathantribouharet) ([@johntribouharet](https://twitter.com/johntribouharet))
+
 ## License
 
 JTScrollViewController is released under the MIT license. See the LICENSE file for more info.
