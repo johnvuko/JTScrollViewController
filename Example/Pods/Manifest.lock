@@ -1,0 +1,17 @@
+PODS:
+  - JTScrollViewController (1.0.2):
+    - Masonry (~> 0.5.0)
+  - Masonry (0.5.3)
+
+DEPENDENCIES:
+  - JTScrollViewController (from `../`)
+
+EXTERNAL SOURCES:
+  JTScrollViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JTScrollViewController: 2b89ae3747adc6d9d82ab92bc587ed6e6fc972a7
+  Masonry: 35368c2ca9577ca87722c12fc52c4bad9b1c1516
+
+COCOAPODS: 0.34.4

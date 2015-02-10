@@ -1,6 +1,6 @@
-JTScrollViewController
-======================
+# JTScrollViewController
 
+[![CI Status](http://img.shields.io/travis/jonathantribouharet/JTScrollViewController.svg)](https://travis-ci.org/jonathantribouharet/JTScrollViewController)
 ![Version](https://img.shields.io/cocoapods/v/JTScrollViewController.svg)
 ![License](https://img.shields.io/cocoapods/l/JTScrollViewController.svg)
 ![Platform](https://img.shields.io/cocoapods/p/JTScrollViewController.svg)
