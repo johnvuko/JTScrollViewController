@@ -20,9 +20,9 @@ With [CocoaPods](http://cocoapods.org/), add this line to your Podfile.
 Create a controller which inherit from JTScrollViewController.
 ```objective-c
 #import <UIKit/UIKit.h>
-#import <JTScrollVIewController.h>
+#import <JTScrollViewController.h>
 
-@interface MyViewController : JTScrollVIewController
+@interface MyViewController : JTScrollViewController
 
 @end
 ```
