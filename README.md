@@ -29,6 +29,11 @@ Create a controller which inherit from JTScrollViewController.
 
 Create your views in the `viewDidLoad` and call `configureConstraintsForSubviews` for create all constraints.
 You can call `addVerticalSpacingForStatusBar` when you don't want the scrollView go under the status bar.
+
+Each views are displayed in the orders they were added to `contentView`.
+You have to set the height of each views by setting the height of their frames.
+You can also add a space between each views by settings `y` property of their frames. 
+
 ```objective-c
 #import "MyViewController.h"
 

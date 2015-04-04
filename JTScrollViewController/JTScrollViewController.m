@@ -40,9 +40,8 @@
     
     for(UIView *view in self.contentView.subviews){
         [view mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(view.superview.mas_left);
-            make.right.equalTo(view.superview.mas_right);
-            make.height.equalTo([NSNumber numberWithFloat:CGRectGetHeight(view.frame)]);
+            make.left.right.equalTo(view.superview);
+            make.height.equalTo(@(CGRectGetHeight(view.frame)));
         }];
     }
     
@@ -58,7 +57,7 @@
         UIView *view = self.contentView.subviews.lastObject;
         
         [view mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(view.superview.mas_bottom);
+            make.bottom.equalTo(view.superview);
         }];
     }
     
