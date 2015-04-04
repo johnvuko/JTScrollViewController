@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jonathantribouharet/JTScrollViewController.git", :tag => s.version.to_s }
   s.source_files  = 'JTScrollViewController/*'
   s.requires_arc = true
-  s.dependency 'Masonry', '~> 0.5.0'
+  s.dependency 'Masonry', '~> 0'
 end
