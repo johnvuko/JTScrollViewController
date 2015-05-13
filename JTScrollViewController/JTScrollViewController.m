@@ -41,7 +41,6 @@
     for(UIView *view in self.contentView.subviews){
         [view mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.right.equalTo(view.superview);
-            make.height.equalTo(@(CGRectGetHeight(view.frame)));
         }];
     }
     
