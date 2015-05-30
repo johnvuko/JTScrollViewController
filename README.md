@@ -82,3 +82,7 @@ You can also add a space between each views by settings `y` property of their fr
 ## License
 
 JTScrollViewController is released under the MIT license. See the LICENSE file for more info.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jonathantribouharet/jtscrollviewcontroller/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
